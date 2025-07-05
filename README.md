@@ -1,69 +1,35 @@
-# React + TypeScript + Vite
+# 📚 LibreCore – Library Management System (Frontend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**LibreCore** is a minimal and modern frontend application for managing a library system. It allows users to manage books, perform borrow operations, and view borrow summaries — all built with React, Redux Toolkit Query, and TypeScript.
 
-Currently, two official plugins are available:
+Live Site 🌐: [https://librecore-frontend.vercel.app](https://librecore-frontend.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Backend Repo 🔗: [LibreCore API](https://github.com/sumonkaysar/LibraCore)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Features
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- 📖 View all books with filterable, sortable table
+- ✏️ Add, edit, and delete books
+- 📦 Borrow a book with quantity and due date
+- 📊 View a borrow summary (aggregation from backend)
+- 🔁 Real-time updates with RTK Query
+- 🌈 Responsive UI using Tailwind CSS
+- 🧠 Type-safe and clean code using TypeScript
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🛠️ Tech Stack
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+| Layer      | Technology                |
+| ---------- | ------------------------- |
+| Frontend   | React + Vite + TypeScript |
+| State Mgmt | Redux Toolkit + RTK Query |
+| Styling    | Tailwind CSS + shadcn/ui  |
+| Routing    | React Router DOM          |
+| Form       | React Hook Form           |
+| Icons      | lucide-react              |
+| Deployment | Vercel                    |
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
