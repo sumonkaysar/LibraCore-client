@@ -5,7 +5,7 @@ import type { TBorrowFormData } from "../../types/borrow.type";
 export const baseApi = createApi({
   reducerPath: "baseApi",
   // baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:5000/api" }),
-  baseQuery: fetchBaseQuery({ baseUrl: "https://libracore.vercel.app" }),
+  baseQuery: fetchBaseQuery({ baseUrl: "https://libracore.vercel.app/api" }),
   tagTypes: ["books", "singleBook", "borrows"],
   endpoints: (build) => ({
     // Book Endpoints
